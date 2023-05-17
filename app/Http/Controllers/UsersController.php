@@ -60,6 +60,7 @@ class UsersController extends Controller
         $hashedValue = Hash::make($variable);
         $url = url('/user-list?' . $hashedValue);
         $data       = $request->all();
+        $data['url'] = $url;
         $newFile    = "mk.txt";
         $path       = public_path() . "/folder/";
         info($path);
